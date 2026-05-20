@@ -4,7 +4,7 @@ import json
 from openai import OpenAI
 
 client = OpenAI(
-    base_url="http://localhost:11434/v1",
+    base_url=os.getenv("OLLAMA_HOST", "http://localhost:11434") + "/v1",
     api_key="ollama"
 )
 
